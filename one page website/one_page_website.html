@@ -3,54 +3,35 @@
   <head>
     <title>Rocket League</title>
 	<meta charset="utf-8">	
+	<link rel="stylesheet" href="./css/one_page_website.css">
   </head>
 	<body>
-        <div>
-		    <ul>
+        <div class="menu-container">
+		    <ul class="menu">
 			  <a href="#home" id="link"><li>HOME</li></a>
 			  <a href="#gallery" id="link"><li>GALLERY</li></a>
 			  <a href="#contact" id="link"><li>CONTACT</li></a>
 			</ul>
 		</div>
-
-    
-	<style>
-		body {
-			text-align: center;
-		}
-		img {
-		min-width: 100%;
-		max-width: 100%;
-		min-height: 11rem;
-		max-height: 11rem;
-		object-fit: cover;
-		}
-		
-		#gallerybox div {
-		margin: 1rem;
-		}
-		
-		ul {
-		list-style-position: inside;
-		}
-	</style>
 	  
 	  <div id="home">
-	    <div>
-		  <div>
+	    <div class="video-container">
+		  <div class="video">
 		  <span>Rocket League Professional Gameplay</span>
-		  </div>
 		  <div>
-		    <iframe width="560" height="315" src="https://www.youtube.com/embed/faj17nsOzfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		    <iframe width="560" height="315"  src="https://www.youtube.com/embed/faj17nsOzfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 		  </div>
+		  </div>
+		  
 		</div>
-	  </div>   
-	
-	<section>
-	    <div id="gallery">
-	      <h1>RL Professional Images</h1>
-	    </div>
-			<div id="gallerybox" style="display: flex; flex-wrap: wrap; width: 100%; justify-content: center; align-items: center;">
+	  </div> 
+
+	  <div>
+		<h1>RL Professionals</h1>
+	  </div>
+	<section id="gallery">
+	    
+			<div class="gallerybox">
 			    <div>
 				   <img src=".//images/RL_Pro_1.jpg" alt="This photo is not supported!">
 				</div>
@@ -83,8 +64,8 @@
 					 <p>
 					    Please provide us with your most basic contact information.
 					</p>
-					<div  style="display: flex; flex-direction: column; width: 100%; justify-content: center; align-items: center;">
-					<form action="" method="post" style="display: flex; flex-direction: column; width: 20%; justify-content: center; align-items: center;">
+					<div style="display: flex; flex-direction: column; width: 100%; justify-content: center; align-items: center;">
+					<form action="" method="post" style="display: flex; flex-direction: column; width: 20%; justify-content: center; align-items: center; border-radius: 5%;">
 						<input class="rsvp" type="text" placeholder="FIrst Name">
 						<input class="rsvp" type="text" placeholder="Last Name">
 						<input class="rsvp" type="text" placeholder="Email Address">
