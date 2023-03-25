@@ -110,12 +110,12 @@
           <p class="card-text">In the near future, Major Mila Killian is the first of her kind: a human saved from a
             terrible crash, who is cyber-enhanced to be a perfect soldier devoted to stopping the world's most dangerous
             criminals.</p>
-            <span class="badge badge-pill badge-info">12:00pm</span>
-            <span class="badge badge-pill badge-info">1:30pm</span>
-            <span class="badge badge-pill badge-info">3:00pm</span>
-            <span class="badge badge-pill badge-info">5:30pm</span>
-            <span class="badge badge-pill badge-info">7:00pm</span>
-            <span class="badge badge-pill badge-info">9:30pm</span>
+          <span class="badge badge-pill badge-info">12:00pm</span>
+          <span class="badge badge-pill badge-info">1:30pm</span>
+          <span class="badge badge-pill badge-info">3:00pm</span>
+          <span class="badge badge-pill badge-info">5:30pm</span>
+          <span class="badge badge-pill badge-info">7:00pm</span>
+          <span class="badge badge-pill badge-info">9:30pm</span>
         </div>
       </div>
 
@@ -137,13 +137,21 @@
     </div>
 
 
-
-
-
-
-
-
     <!----/showtimes---->
+    <!-- jumbotron heading -->
+    <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+      <div class="container">
+        <h1 class="display-4 hidden-sm-down"
+          style="color:#fff;font-family: roboto;font-weight: 900;text-transform: uppercase;">Movie Deals</h1>
+        <p class="lead">Check out our monthly deals...</p>
+        <!-- movie deals-->
+        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register">See our
+          monthly movie deals!</button>
+        <!-- /movie deals-->
+      </div>
+    </div>
+    <!--/jumbotron heading-->
+
 
 
     <div class="text-center">
@@ -153,9 +161,58 @@
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
             placeholder="Enter email">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-primary btn-info popover-dismiss" data-container="body"
+          data-toggle="popover" data-placement="top"
+          data-content="Submit your email to receive great movie reward deals!">
+          Submit
+        </button>
       </form>
     </div>
+
+    <!--form modal-->
+    <div class="modal" tabindex="-1" role="dialog" id="register">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Register to receive movie deals...</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <form>
+                <fieldset class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="First Name...">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Last Name...">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email...">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password...">
+                </fieldset>
+            </form><!--form that pops up when clicking on the movie deals button-->
+
+
+
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><!--closes the page without saving or clicking save changes will submit them-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/form modal-->
 
     <div id="deal" class="container my-5">
       <ul class="nav nav-inline">
@@ -175,14 +232,7 @@
     </div>
 
 
-
-
   </div>
-
-
-
-
-
 
 
 
@@ -196,7 +246,13 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script><!--JS to enable us to use the jquery-->
+
+  <script>
+    $('.popover-dismiss').popover({
+      trigger: 'focus'
+    })
+  </script><!--JS for popover when clicking the hover button-->
 </body>
 
 </html>
